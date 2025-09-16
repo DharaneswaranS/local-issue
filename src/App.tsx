@@ -7,6 +7,13 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AdminLayout from "./pages/admin/AdminLayout";
 import Dashboard from "./pages/admin/Dashboard";
+import Reports from "./pages/admin/Reports";
+import MapView from "./pages/admin/MapView";
+import Departments from "./pages/admin/Departments";
+import Users from "./pages/admin/Users";
+import Analytics from "./pages/admin/Analytics";
+import Notifications from "./pages/admin/Notifications";
+import Settings from "./pages/admin/Settings";
 
 const queryClient = new QueryClient();
 
@@ -20,13 +27,13 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<Dashboard />} />
-            <Route path="reports" element={<Dashboard />} />
-            <Route path="map" element={<Dashboard />} />
-            <Route path="departments" element={<Dashboard />} />
-            <Route path="users" element={<Dashboard />} />
-            <Route path="analytics" element={<Dashboard />} />
-            <Route path="notifications" element={<Dashboard />} />
-            <Route path="settings" element={<Dashboard />} />
+            <Route path="reports" element={<Reports />} />
+            <Route path="map" element={<MapView />} />
+            <Route path="departments" element={<Departments />} />
+            <Route path="users" element={<Users />} />
+            <Route path="analytics" element={<Analytics />} />
+            <Route path="notifications" element={<Notifications />} />
+            <Route path="settings" element={<Settings />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
